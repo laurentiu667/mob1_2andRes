@@ -1,0 +1,353 @@
+{
+	"Arrow fct": {
+		"prefix": "ar",
+		"body": [
+			"($1) => {",
+			"\t$2",
+			"}"
+		],
+		"description": "An arrow function"
+	},
+	"React Native Arrow Function Component": {
+		"prefix": "rcar",
+		"body": [
+			"import { Text, View } from 'react-native';",
+			"",
+			"const ${TM_FILENAME_BASE} = () => {",
+			"  return (",
+			"    <View>",
+			"      {/* Ajoutez votre contenu ici */}",
+			"    </View>",
+			"  );",
+			"};",
+			"",
+			"export default ${TM_FILENAME_BASE};"
+		],
+		"description": "Créer un composant fonctionnel React Native avec une fonction fléchée et export par défaut"
+	},
+	"Text React Native": {
+		"prefix": "t",
+		"body": [
+			"<Text>${1:Votre texte ici}</Text>"
+		],
+		"description": "Créer un composant Text en React Native"
+	},
+	"View React Native": {
+		"prefix": "v",
+		"body": [
+			"<View>${1:Contenu ici}</View>"
+		],
+		"description": "Créer un composant View en React Native"
+	},
+	"ScrollView React Native": {
+		"prefix": "sv",
+		"body": [
+			"<ScrollView>${1:Contenu ici}</ScrollView>"
+		],
+		"description": "Créer un composant ScrollView en React Native"
+	},
+	"Image React Native": {
+		"prefix": "img",
+		"body": [
+			"<Image source={{ uri: '${1:imageUrl}' }} style={{ width: ${2:100}, height: ${3:100} }} />"
+		],
+		"description": "Créer un composant Image en React Native"
+	},
+	"TextInput React Native": {
+		"prefix": "ti",
+		"body": [
+			"<TextInput placeholder='${1:Entrez du texte}' value={${2:value}} onChangeText={${3:setValue}} />"
+		],
+		"description": "Créer un composant TextInput en React Native"
+	},
+	"StyleSheet React Native": {
+		"prefix": "ss",
+		"body": [
+			"import { StyleSheet } from 'react-native';",
+			"",
+			"const styles = StyleSheet.create({",
+			"  ${1:styleName}: {",
+			"    ${2:property}: ${3:value},",
+			"  },",
+			"});",
+			"",
+			"export default styles;"
+		],
+		"description": "Créer un StyleSheet en React Native"
+	},
+	"Button React Native": {
+		"prefix": "btn",
+		"body": [
+			"<Button title='${1:Click me}' onPress={${2:handlePress}} />"
+		],
+		"description": "Créer un composant Button en React Native"
+	},
+	"Switch React Native": {
+		"prefix": "sw",
+		"body": [
+			"<Switch value={${1:isEnabled}} onValueChange={${2:setEnabled}} />"
+		],
+		"description": "Créer un composant Switch en React Native"
+	},
+	"FlatList React Native": {
+		"prefix": "fl",
+		"body": [
+			"<FlatList",
+			"  data={${1:data}}",
+			"  renderItem={({ item }) => <Text>{item.${2:property}}</Text>}",
+			"  keyExtractor={(item) => item.id}",
+			" />"
+		],
+		"description": "Créer un composant FlatList en React Native"
+	},
+	"SectionList React Native": {
+		"prefix": "sl",
+		"body": [
+			"<SectionList",
+			"  sections={[{ title: '${1:title}', data: ${2:data}}]}",
+			"  renderItem={({ item }) => <Text>{item}</Text>}",
+			"  renderSectionHeader={({ section: { title } }) => <Text>{title}</Text>}",
+			" />"
+		],
+		"description": "Créer un composant SectionList en React Native"
+	},
+	"BackHandler React Native": {
+		"prefix": "bh",
+		"body": [
+			"import { BackHandler } from 'react-native';",
+			"",
+			"BackHandler.addEventListener('hardwareBackPress', () => {",
+			"  // Logic for handling back press",
+			"  return true;",
+			"});"
+		],
+		"description": "Gérer le bouton retour matériel Android en React Native"
+	},
+	"DrawerLayoutAndroid React Native": {
+		"prefix": "dla",
+		"body": [
+			"import { DrawerLayoutAndroid } from 'react-native';",
+			"",
+			"<DrawerLayoutAndroid",
+			"  drawerWidth={300}",
+			"  drawerPosition='left'",
+			"  renderNavigationView={() => <View>{/* Drawer content */}</View>}",
+			">",
+			"  <View>{/* Main content */}</View>",
+			"</DrawerLayoutAndroid>"
+		],
+		"description": "Créer un composant DrawerLayout pour Android en React Native"
+	},
+	"PermissionsAndroid React Native": {
+		"prefix": "pa",
+		"body": [
+			"import { PermissionsAndroid } from 'react-native';",
+			"",
+			"PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.${1:permission})"
+		],
+		"description": "Demander des permissions Android en React Native"
+	},
+	"ToastAndroid React Native": {
+		"prefix": "ta",
+		"body": [
+			"import { ToastAndroid } from 'react-native';",
+			"",
+			"ToastAndroid.show('${1:Message}', ToastAndroid.SHORT);"
+		],
+		"description": "Afficher un ToastAndroid en React Native"
+	},
+	"ActivityIndicator React Native": {
+		"prefix": "ai",
+		"body": [
+			"<ActivityIndicator size='${1:small}' color='${2:#0000ff}' />"
+		],
+		"description": "Créer un ActivityIndicator en React Native"
+	},
+	"Alert React Native": {
+		"prefix": "al",
+		"body": [
+			"import { Alert } from 'react-native';",
+			"",
+			"Alert.alert('${1:Title}', '${2:Message}', [",
+			"  { text: 'OK', onPress: () => ${3:handleOk} }",
+			"]);"
+		],
+		"description": "Créer un Alert en React Native"
+	},
+	"Animated React Native": {
+		"prefix": "ani",
+		"body": [
+			"import { Animated } from 'react-native';",
+			"",
+			"const animatedValue = new Animated.Value(0);",
+			"",
+			"Animated.timing(animatedValue, {",
+			"  toValue: ${1:1},",
+			"  duration: ${2:300},",
+			"  useNativeDriver: true",
+			"}).start();"
+		],
+		"description": "Créer des animations avec Animated en React Native"
+	},
+	"Dimensions React Native": {
+		"prefix": "dim",
+		"body": [
+			"import { Dimensions } from 'react-native';",
+			"",
+			"const { width, height } = Dimensions.get('window');"
+		],
+		"description": "Obtenir les dimensions de l'écran avec Dimensions en React Native"
+	},
+	"KeyboardAvoidingView React Native": {
+		"prefix": "kav",
+		"body": [
+			"<KeyboardAvoidingView behavior='padding'>",
+			"  ${1:Contenu ici}",
+			"</KeyboardAvoidingView>"
+		],
+		"description": "Éviter que le clavier n'empiète sur l'interface avec KeyboardAvoidingView"
+	},
+	"Linking React Native": {
+		"prefix": "link",
+		"body": [
+			"import { Linking } from 'react-native';",
+			"",
+			"Linking.openURL('${1:URL}')"
+		],
+		"description": "Ouvrir des liens avec Linking en React Native"
+	},
+	"Modal React Native": {
+		"prefix": "mod",
+		"body": [
+			"<Modal visible={${1:true}} animationType='slide'>",
+			"  <View>${2:Contenu ici}</View>",
+			"</Modal>"
+		],
+		"description": "Créer un Modal en React Native"
+	},
+	"PixelRatio React Native": {
+		"prefix": "pr",
+		"body": [
+			"import { PixelRatio } from 'react-native';",
+			"",
+			"const scale = PixelRatio.get();"
+		],
+		"description": "Obtenir la densité de pixels de l'appareil avec PixelRatio"
+	},
+	"RefreshControl React Native": {
+		"prefix": "rc",
+		"body": [
+			"import { RefreshControl } from 'react-native';",
+			"",
+			"<ScrollView",
+			"  refreshControl={<RefreshControl refreshing={${1:false}} onRefresh={${2:handleRefresh}} />}",
+			">",
+			"  ${3:Contenu ici}",
+			"</ScrollView>"
+		],
+		"description": "Ajouter la fonctionnalité de rafraîchissement à un ScrollView avec RefreshControl"
+	},
+	"StatusBar React Native": {
+		"prefix": "sb",
+		"body": [
+			"import { StatusBar } from 'react-native';",
+			"",
+			"<StatusBar barStyle='${1:dark-content}' hidden={${2:false}} />"
+		],
+		"description": "Contrôler la barre de statut de l'application avec StatusBar en React Native"
+	},
+	"useState Hook": {
+		"prefix": "us",
+		"body": [
+			"const [${1:value}, ${2:setValue}] = useState(${3:initialValue});"
+		],
+		"description": "Déclare une variable d'état avec useState en React"
+	},
+	"useEffect Hook": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"  ${1:// Code à exécuter}",
+			"  return () => {",
+			"    ${2:// Cleanup code}",
+			"  };",
+			"}, [${3:dependencies}]);"
+		],
+		"description": "Utilise useEffect pour effectuer des effets de bord en React"
+	},
+	"useContext Hook": {
+		"prefix": "uc",
+		"body": [
+			"const ${1:contextValue} = useContext(${2:Context});"
+		],
+		"description": "Accède au contexte avec useContext en React"
+	},
+	"useReducer Hook": {
+		"prefix": "ur",
+		"body": [
+			"const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer}, ${4:initialState});"
+		],
+		"description": "Utilise useReducer pour gérer un état complexe en React"
+	},
+	"useRef Hook": {
+		"prefix": "urf",
+		"body": [
+			"const ${1:ref} = useRef(${2:initialValue});"
+		],
+		"description": "Déclare une référence mutable avec useRef en React"
+	},
+	"useMemo Hook": {
+		"prefix": "um",
+		"body": [
+			"const ${1:result} = useMemo(() => ${2:computeValue}, [${3:dependencies}]);"
+		],
+		"description": "Utilise useMemo pour mémoriser une valeur calculée en React"
+	},
+	"useCallback Hook": {
+		"prefix": "ucb",
+		"body": [
+			"const ${1:callback} = useCallback(() => {",
+			"  ${2:// Code de la fonction}",
+			"}, [${3:dependencies}]);"
+		],
+		"description": "Utilise useCallback pour mémoriser une fonction en React"
+	},
+	"useLayoutEffect Hook": {
+		"prefix": "ule",
+		"body": [
+			"useLayoutEffect(() => {",
+			"  ${1:// Code à exécuter}",
+			"  return () => {",
+			"    ${2:// Cleanup code}",
+			"  };",
+			"}, [${3:dependencies}]);"
+		],
+		"description": "Utilise useLayoutEffect pour exécuter un effet avant la mise à jour du DOM"
+	},
+	"Custom Hook": {
+		"prefix": "ch",
+		"body": [
+			"function ${1:useCustomHook}(${2:props}) {",
+			"  ${3:// Logique du hook personnalisé}",
+			"  return ${4:result};",
+			"}"
+		],
+		"description": "Crée un hook personnalisé en React"
+	},
+	"useImperativeHandle Hook": {
+		"prefix": "uih",
+		"body": [
+			"useImperativeHandle(${1:ref}, () => ({",
+			"  ${2:method}: ${3:() => {}}",
+			"}), [${4:dependencies}]);"
+		],
+		"description": "Personnalise les valeurs exposées à un ref avec useImperativeHandle"
+	},
+	"useDebugValue Hook": {
+		"prefix": "udg",
+		"body": [
+			"useDebugValue(${1:value});"
+		],
+		"description": "Ajoute des informations de débogage aux hooks personnalisés avec useDebugValue"
+	}
+}
